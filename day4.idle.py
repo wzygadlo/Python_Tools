@@ -1293,3 +1293,558 @@ TypeError: tick() takes no arguments (1 given)
 >>> 
 >>> # lunch until 1:25pm
 >>> 
+>>> 
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+['/Users/mike/teaching/2017-04-24/fibonacci.py']
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+[2.0, 9.0, 5j, 4.0]
+>>> 
+>>> 
+>>> hardwork(5)
+doing hard work!
+6
+>>> hardwork(6)
+doing hard work!
+7
+>>> hardwork(6)
+doing hard work!
+7
+>>> hardwork(6)
+doing hard work!
+7
+>>> hardwork(6)
+doing hard work!
+7
+>>> hardwork(6)
+doing hard work!
+7
+>>> hardwork(6)
+doing hard work!
+7
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+[2.0, 9.0, 5j, 4.0]
+>>> caching_hardwork(5)
+doing hard work!
+6
+>>> caching_hardwork(5)
+6
+>>> caching_hardwork(5)
+6
+>>> caching_hardwork(5)
+6
+>>> 
+>>> 
+>>> conjecture(5)
+calling collatz
+with (5,) {}
+result was 16
+calling collatz
+with (16,) {}
+result was 8
+calling collatz
+with (8,) {}
+result was 4
+calling collatz
+with (4,) {}
+result was 2
+calling collatz
+with (2,) {}
+result was 1
+True
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+[2.0, 9.0, 5j, 4.0]
+>>> caching_conjecture(5)
+calling collatz
+with (5,) {}
+result was 16
+calling collatz
+with (16,) {}
+result was 8
+calling collatz
+with (8,) {}
+result was 4
+calling collatz
+with (4,) {}
+result was 2
+calling collatz
+with (2,) {}
+result was 1
+True
+>>> caching_conjecture(5)
+True
+>>> caching_hardwork(10)
+doing hard work!
+11
+>>> caching_hardwork(5)
+True
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+[2.0, 9.0, 5j, 4.0]
+>>> conjecture(5)
+calling collatz
+with (5,) {}
+result was 16
+calling collatz
+with (16,) {}
+result was 8
+calling collatz
+with (8,) {}
+result was 4
+calling collatz
+with (4,) {}
+result was 2
+calling collatz
+with (2,) {}
+result was 1
+True
+>>> conjecture(5)
+True
+>>> conjecture(6)
+calling collatz
+with (6,) {}
+result was 3
+calling collatz
+with (3,) {}
+result was 10
+calling collatz
+with (10,) {}
+result was 5
+True
+>>> 
+>>> 
+>>> 
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+[2.0, 9.0, 5j, 4.0]
+>>> conjecture(6)
+calling collatz
+with (6,) {}
+result was 3
+calling collatz
+with (3,) {}
+result was 10
+calling collatz
+with (10,) {}
+result was 5
+calling collatz
+with (5,) {}
+result was 16
+calling collatz
+with (16,) {}
+result was 8
+calling collatz
+with (8,) {}
+result was 4
+calling collatz
+with (4,) {}
+result was 2
+calling collatz
+with (2,) {}
+result was 1
+True
+>>> conjecture(6)
+True
+>>> hardwork(6)
+doing hard work!
+7
+>>> hardwork(6)
+7
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+[2.0, 9.0, 5j, 4.0]
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/fibonacci.py ===========
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+>>> hardwork(1)
+doing hard work!
+2
+>>> hardwork(2)
+doing hard work!
+3
+>>> hardwork(3)
+doing hard work!
+4
+>>> hardwork.__closure__[0].cell_contents
+{(2,): 3, (3,): 4, (1,): 2}
+>>> hardwork(3)
+4
+>>> hardwork(4)
+doing hard work!
+5
+>>> hardwork.__closure__[0].cell_contents
+{(4,): 5}
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+>>> hardwork(1)
+doing hard work!
+2
+>>> hardwork(2)
+doing hard work!
+3
+>>> hardwork(3)
+doing hard work!
+4
+>>> hardwork.__closure__[0].cell_contents
+{(2,): 3, (3,): 4, (1,): 2}
+>>> hardwork(4)
+doing hard work!
+5
+>>> hardwork.__closure__[0].cell_contents
+{(3,): 4, (1,): 2, (4,): 5}
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+>>> 
+=========== RESTART: /Users/mike/teaching/2017-04-24/decorators.py ===========
+>>> 
+>>> 
+>>> hardwork.__name__
+'hardwork'
+>>> help(hardwork)
+Help on function hardwork in module __main__:
+
+hardwork(*args)
+
+>>> 
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+>>> 
+>>> 
+>>> bottle
+<module 'libs.bottle' from '/Users/mike/teaching/2017-04-24/libs/bottle.py'>
+>>> bottle
+<module 'libs.bottle' from '/Users/mike/teaching/2017-04-24/libs/bottle.py'>
+>>> 
+>>> 
+>>> 
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+
+Traceback (most recent call last):
+  File "/Users/mike/teaching/2017-04-24/rest.py", line 7, in <module>
+    @route('/')
+NameError: name 'route' is not defined
+>>> 
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:06:42] "GET / HTTP/1.1" 200 21
+127.0.0.1 - - [27/Apr/2017 15:06:42] "GET /favicon.ico HTTP/1.1" 404 748
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:11:35] "GET /docfinder/v1/search?q=zip,barry HTTP/1.1" 200 224
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:12:59] "GET /docfinder/v1/search?q=zip,barry HTTP/1.1" 200 224
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:14:14] "GET /docfinder/v1/search?q=zip,barry HTTP/1.1" 200 336
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:14:30] "GET /docfinder/v1/search?q=zip,barry HTTP/1.1" 200 421
+Traceback (most recent call last):
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 993, in _handle
+    out = route.call(**args)
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 1984, in wrapper
+    rv = callback(*a, **ka)
+  File "/Users/mike/teaching/2017-04-24/rest.py", line 16, in search
+    keywords = bottle.request.query['q'].split(',')
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 2081, in __getitem__
+    return self.dict[key][-1]
+KeyError: 'q'
+127.0.0.1 - - [27/Apr/2017 15:15:12] "GET /docfinder/v1/search?k=zip,barry HTTP/1.1" 500 778
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:15:45] "GET /docfinder/v1/search?k=zip,barry HTTP/1.1" 200 3571
+127.0.0.1 - - [27/Apr/2017 15:15:52] "GET /docfinder/v1/search?k=zip,barry HTTP/1.1" 200 3571
+127.0.0.1 - - [27/Apr/2017 15:15:55] "GET /docfinder/v1/search?k=zip,barry HTTP/1.1" 200 3571
+127.0.0.1 - - [27/Apr/2017 15:16:23] "GET /docfinder/v1/search?q=hello HTTP/1.1" 200 61
+127.0.0.1 - - [27/Apr/2017 15:16:28] "GET /docfinder/v1/search?k=foo HTTP/1.1" 200 3571
+>>> 
+>>> 
+>>> import docfinder
+>>> docfinder.search()
+[]
+>>> docfinder.search('')
+[u'pep-0020', u'pep-0218', u'pep-3126', u'pep-0360', u'pep-3146', u'pep-0292', u'pep-0306', u'pep-3107', u'pep-0243', u'pep-3105', u'pep-0293', u'pep-0211', u'pep-0382', u'pep-0239', u'pep-0349', u'pep-0010', u'pep-0255', u'pep-0280', u'pep-0283', u'pep-0231', u'pep-0235', u'pep-0224', u'pep-0219', u'pep-0251', u'pep-0003', u'pep-0260', u'pep-0370', u'pep-0228', u'pep-0332', u'pep-3113', u'pep-0318', u'pep-0401', u'pep-0217', u'pep-0320', u'pep-0102', u'pep-3140', u'pep-0222', u'pep-0362', u'pep-0262', u'pep-0252', u'pep-0328', u'pep-0247', u'pep-0245', u'pep-0316', u'pep-3133', u'pep-0403', u'pep-0396', u'pep-0253', u'pep-0351', u'pep-0232', u'pep-0289', u'pep-3103', u'pep-0100', u'pep-0200', u'pep-0246', u'pep-0363', u'pep-0391', u'pep-0160', u'pep-0387', u'pep-3124', u'pep-0004', u'pep-0223', u'pep-0272', u'pep-0256', u'pep-0326', u'pep-0282', u'pep-3143', u'pep-0299', u'pep-0257', u'pep-0008', u'pep-0379', u'pep-0201', u'pep-0241', u'pep-0327', u'pep-0404', u'pep-0366', u'pep-0042', u'pep-0402', u'pep-3109', u'pep-0314', u'pep-0285', u'pep-0265', u'pep-0343', u'pep-0268', u'pep-0628', u'pep-0236', u'pep-0390', u'pep-0338', u'pep-0359', u'pep-0345', u'pep-0298', u'pep-0266', u'pep-0309', u'pep-3099', u'pep-3333', u'pep-0333', u'pep-0385', u'pep-0335', u'pep-0334', u'pep-0229', u'pep-3149', u'pep-0376', u'pep-0346', u'pep-0302', u'pep-0006', u'pep-0303', u'pep-0101', u'pep-0371', u'pep-0321', u'pep-0354', u'pep-0207', u'pep-3100', u'pep-0331', u'pep-0206', u'pep-0444', u'pep-0374', u'pep-0386', u'pep-3001', u'pep-0263', u'pep-0002', u'pep-0269', u'pep-0365', u'pep-0290', u'pep-0267', u'pep-3110', u'pep-0258', u'pep-3155', u'pep-3128', u'pep-0369', u'pep-0350', u'pep-3138', u'pep-3147', u'pep-3153', u'pep-3104', u'pep-0342', u'pep-0364', u'pep-0001', u'pep-0395', u'pep-0216', u'pep-0315', u'pep-0355', u'pep-0275', u'pep-0324', u'pep-0281', u'pep-0230', u'pep-3119', u'pep-0287', u'pep-0213', u'pep-0352', u'pep-0284', u'pep-0307', u'pep-3000', u'pep-0301', u'pep-0248', u'pep-0007', u'pep-0367', u'pep-0273', u'pep-3131', u'pep-0323', u'pep-0291', u'pep-0009', u'pep-0368', u'pep-3137', u'pep-0344', u'pep-0340', u'pep-0389', u'pep-3134', u'pep-3136', u'pep-0288', u'pep-3141', u'pep-0234', u'pep-0308', u'pep-0312', u'pep-0214', u'pep-0208', u'pep-3101', u'pep-0380', u'pep-0322', u'pep-0383', u'pep-0372', u'pep-0377', u'pep-0399', u'pep-3115', u'pep-3130', u'pep-3129', u'pep-0358', u'pep-3108', u'pep-3116', u'pep-0205', u'pep-0227', u'pep-0297', u'pep-0353', u'pep-3122', u'pep-3106', u'pep-0305', u'pep-0249', u'pep-0361', u'pep-3150', u'pep-0238', u'pep-0276', u'pep-3120', u'pep-0259', u'pep-3139', u'pep-0381', u'pep-0310', u'pep-3127', u'pep-0277', u'pep-0378', u'pep-0012', u'pep-0203', u'pep-0357', u'pep-0226', u'pep-0311', u'pep-3144', u'pep-0304', u'pep-0339', u'pep-0274', u'pep-0325', u'pep-0250', u'pep-3148', u'pep-0400', u'pep-0393', u'pep-3132', u'pep-3003', u'pep-3121', u'pep-0244', u'pep-0319', u'pep-0209', u'pep-3102', u'pep-3135', u'pep-0237', u'pep-3114', u'pep-0279', u'pep-0242', u'pep-0330', u'pep-0348', u'pep-0394', u'pep-0261']
+>>> len(docfinder.search(''))
+238
+>>> ''.split(',')
+['']
+>>> 
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:19:52] "GET /docfinder/v1/search?k=foo HTTP/1.1" 200 2
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:27:22] "GET /docfinder/v1/document/pep-3000 HTTP/1.1" 200 6257
+Traceback (most recent call last):
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 993, in _handle
+    out = route.call(**args)
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 1984, in wrapper
+    rv = callback(*a, **ka)
+  File "/Users/mike/teaching/2017-04-24/rest.py", line 23, in select
+    def select(uri):
+  File "/Users/mike/teaching/2017-04-24/docfinder.py", line 117, in get_document
+    raise UnknownURI(uri)
+UnknownURI: pep-4000
+127.0.0.1 - - [27/Apr/2017 15:28:11] "GET /docfinder/v1/document/pep-4000 HTTP/1.1" 500 777
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:29:57] "GET /docfinder/v1/document/pep-4000 HTTP/1.1" 200 71
+127.0.0.1 - - [27/Apr/2017 15:30:10] "GET /docfinder/v1/document/pep-3000 HTTP/1.1" 200 6315
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+>>> 
+>>> 
+>>> 
+>>> from urllib import urlopen, urlencode
+>>> data = {'uri': 'greetings', 'text': 'Hello World!'}
+>>> urlencode(data)
+'text=Hello+World%21&uri=greetings'
+>>> 
+>>> host = 'http://localhost:8080/'
+>>> resource = 'docfinder/v1/document/'
+>>> uri = 'greetings'
+>>> url = host + resource + uri
+>>> url
+'http://localhost:8080/docfinder/v1/document/greetings'
+>>> del data['uri']
+>>> data
+{'text': 'Hello World!'}
+>>> urlencode(data)
+'text=Hello+World%21'
+>>> '?'.join(url, urlencode(data))
+
+Traceback (most recent call last):
+  File "<pyshell#413>", line 1, in <module>
+    '?'.join(url, urlencode(data))
+TypeError: join() takes exactly one argument (2 given)
+>>> '?'.join([url, urlencode(data)])
+'http://localhost:8080/docfinder/v1/document/greetings?text=Hello+World%21'
+>>> 
+>>> url
+'http://localhost:8080/docfinder/v1/document/greetings'
+>>> urlencode(data)
+'text=Hello+World%21'
+>>> 
+>>> response = urllib(url, urlencode(data))
+
+Traceback (most recent call last):
+  File "<pyshell#419>", line 1, in <module>
+    response = urllib(url, urlencode(data))
+NameError: name 'urllib' is not defined
+>>> response = urlopen(url, urlencode(data))
+>>> response.read()
+'{\n  "status": "OK", \n  "text": "Hello World!", \n  "uri": "greetings"\n}'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> from urllib import urlopen, urlencode
+>>> 
+>>> host = 'http://localhost:8080/'
+>>> resource = 'docfinder/v1/document/'
+>>> uri = 'greetings'
+>>> 
+>>> data = {'text': 'Hello World!'}
+>>> 
+>>> url = host + resource + uri
+>>> 
+>>> response = urlopen(url, urlencode(data))
+>>> print response.read()
+{
+  "status": "error", 
+  "text": "Hello World!", 
+  "uri": "greetings", 
+  "error": "DuplicateURI"
+}
+>>> response.close()
+>>> 
+>>> response = urlopen(url)
+>>> print response.read()
+{
+  "status": "OK", 
+  "content": "Hello World!", 
+  "uri": "greetings"
+}
+>>> response.close()
+>>> 
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+
+Traceback (most recent call last):
+  File "/Users/mike/teaching/2017-04-24/rest.py", line 65, in <module>
+    bottle.run(host='localhost', port=8080)
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 3699, in run
+    server.run(app)
+  File "/Users/mike/teaching/2017-04-24/libs/bottle.py", line 3237, in run
+    handler_cls)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/simple_server.py", line 151, in make_server
+    server = server_class((host, port), handler_class)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 417, in __init__
+    self.server_bind()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/simple_server.py", line 48, in server_bind
+    HTTPServer.server_bind(self)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 431, in server_bind
+    self.socket.bind(self.server_address)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 48] Address already in use
+>>> 
+============== RESTART: /Users/mike/teaching/2017-04-24/rest.py ==============
+Bottle v0.13-dev server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+127.0.0.1 - - [27/Apr/2017 15:53:45] "GET /cmd/v1/echo%20hello HTTP/1.1" 200 44
+127.0.0.1 - - [27/Apr/2017 15:53:54] "GET /cmd/v1/ls HTTP/1.1" 200 608
+127.0.0.1 - - [27/Apr/2017 15:54:17] "GET /cmd/v1/rm%20-rf%20starwars HTTP/1.1" 200 37
